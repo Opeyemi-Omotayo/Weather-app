@@ -12,7 +12,8 @@ const Search = () => {
     const getWeatherInfo = async (e) => {
         e.preventDefault();
       try {
-        let url = `http://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&units=metric&appid=c44cfba18f9e9345c01975580207d06e`;
+        const apiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
+        let url = `http://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&units=metric&appid=${apiKey}`;
   
         let res = await fetch(url);
         let data = await res.json();
