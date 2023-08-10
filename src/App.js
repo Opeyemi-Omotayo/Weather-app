@@ -1,8 +1,11 @@
+import Header from "./components/Header";
+import Search from "./components/Search";
 
 function App() {
   return (
-    <div className="bg-red-300">
-      <h1>Hello WORLD</h1>
+    <div>
+      <Header />
+      <Search />
     </div>
   );
 }

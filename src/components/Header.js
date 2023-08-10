@@ -23,38 +23,34 @@ const Header = () => {
   }
 
   return (
-    <div>
-      <section >
-        <div >
-          <h1 id="greeting">{greeting}</h1>
-        </div>
+    <div className="bg-gray-900" >
+  <section className=" py-6 p-7 flex justify-between items-center">
+   <div>
+    <h1 id="greeting" className="font-semibold text-xl sm:text-2xl capitalize text-white">{greeting}</h1>
+    <p id="weather" className="font-normal text-sm sm:text-base mt-1 text-white">Retrieving weather information...</p>
+  </div>
 
-        <div >
-          <p>Local time:</p>
-          <div >
-            <div >
-              <span data-time="hours" >
-                {time.getHours()}
-              </span>
-              <span >Hours</span>
-            </div>
-            <span >:</span>
-            <div >
-              <span data-time="minutes" >
-                {time.getMinutes()}
-              </span>
-              <span >mins</span>
-            </div>
-            <span>:</span>
-            <div >
-              <span data-time="seconds">
-                {time.getSeconds()}
-              </span>
-              <span>secs</span>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="right-side bg-gray-700 rounded-lg p-4 flex items-center justify-center flex-col text-white">
+    <p className=" font-normal text-xs sm:text-sm mb-2">Local time:</p>
+    <div className=" flex">
+      <div className=" flex flex-col justify-center items-start bg-gray-600 px-3 py-1 rounded">
+        <span data-time="hours" className=" font-bold text-lg sm:text-xl">{time.getHours()}</span>
+        <span className="  font-normal text-xs sm:text-sm capitalize">Hours</span>
+      </div>
+      <span className="  font-bold text-lg sm:text-xl mx-4 items-center">:</span>
+      <div className=" flex flex-col justify-center items-start bg-gray-600 px-3 py-1 rounded">
+        <span data-time="minutes" className=" font-bold text-lg sm:text-xl">{time.getMinutes()}</span>
+        <span className="  font-normal text-xs sm:text-sm capitalize">mins</span>
+      </div>
+      <span className="  font-bold text-lg sm:text-xl mx-4 items-center">:</span>
+      <div className=" flex flex-col justify-center items-start bg-gray-600 px-3 py-1 rounded">
+        <span data-time="seconds" className=" font-bold text-lg sm:text-xl">{time.getSeconds()}</span>
+        <span className=" font-normal text-xs sm:text-sm capitalize">secs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
