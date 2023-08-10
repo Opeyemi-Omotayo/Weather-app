@@ -26,8 +26,8 @@ const Header = () => {
     <div className="bg-gray-900" >
   <section className=" py-6 p-7 flex justify-between items-center">
    <div>
-    <h1 id="greeting" className="font-semibold text-xl sm:text-2xl capitalize text-white">{greeting}</h1>
-    <p id="weather" className="font-normal text-sm sm:text-base mt-1 text-white">Retrieving weather information...</p>
+    <h1  className="font-semibold text-xl sm:text-2xl capitalize text-white">{greeting}</h1>
+    <p className="font-normal text-sm sm:text-base mt-1 text-white">Retrieving weather information...</p>
   </div>
 
   <div className="right-side bg-gray-700 rounded-lg p-4 flex items-center justify-center flex-col text-white">
