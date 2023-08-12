@@ -38,11 +38,11 @@ const Header = () => {
               <span data-time="hours" className=" font-bold text-lg sm:text-xl">
                 {time.getHours()}
               </span>
-              <span className="  font-normal text-xs sm:text-sm capitalize">
+              <span className="font-normal text-xs sm:text-sm capitalize">
                 Hours
               </span>
             </div>
-            <span className="  font-bold text-lg sm:text-xl mx-4 items-center">
+            <span className="font-bold text-lg sm:text-xl mx-4 items-center">
               :
             </span>
             <div className=" flex flex-col justify-center items-start bg-sky-400 px-3 py-1 rounded">
@@ -52,7 +52,7 @@ const Header = () => {
               >
                 {time.getMinutes()}
               </span>
-              <span className="  font-normal text-xs sm:text-sm capitalize">
+              <span className="font-normal text-xs sm:text-sm capitalize">
                 mins
               </span>
             </div>
