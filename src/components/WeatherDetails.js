@@ -42,65 +42,65 @@ function WeatherDetails({
   let timeStr = `${date.getHours()}:${date.getMinutes()}`;
 
   return (
-    <div className="flex items-center justify-center rounded-md">
-      <article className="border shadow w-3/6 ">
-        <div className="w-40">
+    <div className="flex items-center justify-center">
+      <article className="border shadow lg:w-3/6 w-4/6 bg-white rounded-md opacity-80">
+        <div className="flex items-center justify-around lg:text-6xl text-3xl text-sky-400 py-6 lg:py-8 ">
           <i className={`wi  ${weatherState}`}></i>
         </div>
-        <div className="weatherInfo">
-          <div className="temperature">
+        <div className="flex items-center justify-between border-t border-sky-200 w-full">
+          <div className="px-8 lg:text-2xl text-lg">
             <span>{temp}&deg;</span>
           </div>
-          <div className="flex flex-row">
-            <div className=" uppercase text-4xl font-light">
+          <div className="flex items-center justify-center flex-col bg-sky-400 w-4/6 text-white py-2">
+            <div className=" uppercase text-lg lg:text-3xl font-light">
               {weatherType}
             </div>
-            <div className=" text-sm">
+            <div className="text-sm  lg:text-lg font-light">
               {name}, {country}
             </div>
           </div>
         </div>
         
-        <div className="flex items-center justify-around py-5 border-t border-b border-gray-300">
-            <div >
-              <p>
-                <i className={"wi wi-sunset text-4xl"}></i>
+        <div className="flex items-center justify-around py-4 border-t border-sky-200">
+           <div className="flex flex-col sm:flex-row" >
+              <p className="text-sky-400 px-3">
+                <i className={"wi wi-sunset text-sm lg:text-4xl"}></i>
               </p>
-              <p >
+              <p className="text-sm">
                 {timeStr} PM <br />
                 Sunset
               </p>
             </div>
 
-            <div >
-              <p>
-                <i className={"wi wi-humidity text-4xl"}></i>
+            <div className="flex flex-col sm:flex-row">
+              <p className="text-sky-400 px-3">
+                <i className={"wi wi-humidity text-lg lg:text-4xl"}></i>
               </p>
-              <p >
+              <p className="text-sm">
                 {humidity} <br />
                 Humidity
               </p>
             </div>
-          
-            <div >
-              <p>
-                <i className={"wi wi-rain text-4xl"}></i>
+           
+          <div className="flex flex-col sm:flex-row">
+              <p className="text-sky-400 px-3">
+                <i className={"wi wi-rain text-lg lg:text-4xl"}></i>
               </p>
-              <p >
+              <p className="text-sm">
                 {pressure} <br />
                 Pressure
               </p>
             </div>
 
-            <div >
-              <p>
-                <i className={"wi wi-strong-wind text-4xl"}></i>
+            <div className="flex flex-col sm:flex-row ">
+              <p className="text-sky-400 px-3">
+                <i className={"wi wi-strong-wind text-lg lg:text-4xl"}></i>
               </p>
-              <p>
+              <p className="text-sm">
                 {speed} <br />
                 Speed
               </p>
-          </div>
+           </div>           
         </div>
       </article>
     </div>

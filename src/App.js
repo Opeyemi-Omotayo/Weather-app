@@ -3,7 +3,7 @@ import Search from "./components/Search";
 
 function App() {
   return (
-    <div>
+    <div className=" w-full bg-cover bg-my-image h-100vh">
       <Header />
       <Search />
     </div>
