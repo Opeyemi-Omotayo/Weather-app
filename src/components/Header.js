@@ -45,7 +45,7 @@ const Header = () => {
             <span className="font-bold text-lg sm:text-xl mx-4 items-center">
               :
             </span>
-            <div className=" flex flex-col justify-center items-start bg-sky-400 px-3 py-1 rounded">
+            <div className="flex flex-col justify-center items-start bg-sky-400 px-3 py-1 rounded">
               <span
                 data-time="minutes"
                 className=" font-bold text-lg sm:text-xl"
@@ -56,10 +56,10 @@ const Header = () => {
                 mins
               </span>
             </div>
-            <span className="  font-bold text-lg sm:text-xl mx-4 items-center">
+            <span className="font-bold text-lg sm:text-xl mx-4 items-center">
               :
             </span>
-            <div className=" flex flex-col justify-center items-start bg-sky-400 px-3 py-1 rounded">
+            <div className="flex flex-col justify-center items-start bg-sky-400 px-3 py-1 rounded">
               <span
                 data-time="seconds"
                 className=" font-bold text-lg sm:text-xl"
