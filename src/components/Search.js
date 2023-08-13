@@ -31,10 +31,6 @@ const Search = () => {
 
       setCitySuggestions(suggestions);
     } catch (error) {
-      console.error(
-        "An error occurred while fetching city suggestions:",
-        error
-      );
       setCitySuggestions([]);
     }
   };
@@ -76,7 +72,7 @@ const Search = () => {
         setError(null);
       }
     } catch (error) {
-      setError("An error occurred while fetching data");
+      setError("Please input a city");
       setIsWeatherAvailable(false);
     }
     setSearchTerm("");
