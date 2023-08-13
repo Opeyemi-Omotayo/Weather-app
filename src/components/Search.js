@@ -8,6 +8,8 @@ const Search = () => {
   const [error, setError] = useState(null);
   const [citySuggestions, setCitySuggestions] = useState([]);
 
+  const apiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
+
   const searchTermHandler = (e) => {
     const newSearchTerm = e.target.value;
     setSearchTerm(newSearchTerm);
@@ -17,8 +19,7 @@ const Search = () => {
 
   const fetchCitySuggestions = async (input) => {
     try {
-      const apiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
-      const url = `https://api.openweathermap.org/data/2.5/find?q=${input}&type=like&sort=population&appid=${apiKey}`;
+      const url = process.env.REACT_APP_URL + `/data/2.5/find?q=${input}&type=like&sort=population&appid=${apiKey}`;
 
       const res = await fetch(url);
       const data = await res.json();
@@ -41,8 +42,7 @@ const Search = () => {
     }
 
     try {
-      const apiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
-      let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&units=metric&appid=${apiKey}`;
+      let url = process.env.REACT_APP_URL + `/data/2.5/weather?q=${searchTerm}&units=metric&appid=${apiKey}`;
 
       let res = await fetch(url);
       let data = await res.json();
